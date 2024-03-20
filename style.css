@@ -1,0 +1,86 @@
+body {
+    background-color: #f5f9ff;
+    font-family: NTR;
+    margin: 0; /* Añadir margen cero para asegurar un espacio uniforme */
+}
+.head{
+    font-size: 48px;
+    color: #0c307c;
+    margin: 1rem;
+}
+.headDescription{
+    text-align: center;
+    font-size: 25px;
+    margin: 0.5rem;
+}
+.textField{
+    border: none;
+    resize: none;
+    width: 90%;
+    height: 90%;
+    font-family: NTR;
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none; /* Quitar el borde al seleccionar el textarea */
+}
+.container{
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+    gap: 10px;
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 100px;
+}
+.imgEncrypt{
+    font-size: 10px;
+    margin: 2rem 0 0.5rem;
+}
+.displayEncrypted{
+    background-color: #ffffff;
+    font-family: NTR;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+.displayEncrypted-menssage{
+    color: #5a5a5a;
+    margin: 2rem;
+    font-size: 20px;
+    padding: 0 2rem;
+}
+span{
+    font-size: 25px;
+    font-weight: bold; 
+}
+h2{
+    margin: 0;
+}
+::placeholder{
+    padding: 2rem;
+    font-size: 20px;
+    font-family: NTR;
+}
+button{
+    border: 0.02rem solid #0c307c; /* Borde delgado de 1 píxel sólido */
+    border-radius: 0.2rem;
+    color: #ffffff;
+    background-color: #0c307c;
+    font-size: 25px;
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.instructions{
+    text-align: left;
+    margin-left: 2rem;
+    color: #4d5f85;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    color: #0c307c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+}
