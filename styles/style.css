@@ -56,13 +56,8 @@ span{
 h2{
     margin: 0;
 }
-::placeholder{
-    padding: 2rem;
-    font-size: 20px;
-    font-family: NTR;
-}
 button{
-    border: 0.02rem solid #0c307c; /* Borde delgado de 1 píxel sólido */
+    border: 0.02rem solid #0c307c; 
     border-radius: 0.2rem;
     color: #ffffff;
     background-color: #0c307c;
@@ -70,6 +65,12 @@ button{
     padding: 0.5rem 1.5rem;
     margin: 0.5rem;
     cursor: pointer;
+}
+button:hover{
+    background-color: #4f70b8;
+    border-color: #0c307c;
+    color: #000000;
+    font-weight: bold;
 }
 .instructions{
     text-align: left;

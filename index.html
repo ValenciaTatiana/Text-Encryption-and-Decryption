@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encrypt and Decrypt Text</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <script src="encryption-decryption.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
@@ -19,11 +20,11 @@
     </header>
     <div class="container">
         <div>
-            <textarea class="textField" placeholder="Enter your text here..."></textarea>
+            <textarea id="textToEncrypt" class="textField" placeholder="Enter your text here..."></textarea>
             <p class="instructions">ℹ️​ Only lowercase text is allowed, excluding letters with accents and special
                 characters.</p>
-            <button>Encrypt</button>
-            <button>Decrypt</button>
+            <button id="buttEncrypt" onclick="encryption()">Encrypt​</button>
+            <button id="buttDecrypt">Decrypt</button>
         </div>
         <div class="displayEncrypted">
             <h2>Let's Encrypted</h2>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <footer>
-        <p>Created by Tatiana Cuadros</p>
+        <p>❤️​ Created by Tatiana Cuadros ❤️​ 2024</p> <!-- poner linkeding y git -->
     </footer>
 </body>
 
