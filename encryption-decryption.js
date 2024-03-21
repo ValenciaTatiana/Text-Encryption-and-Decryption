@@ -25,7 +25,9 @@ function encryption() {
             resultEncrypt += character;
         }
     }
-    console.log(resultEncrypt);
+
+    document.getElementById("message").innerHTML = "Encrypted Text!🎉​";
+    document.getElementById("displayEncrypted-menssage").innerHTML = resultEncrypt;
 }
 
 function decipher() {
@@ -48,6 +50,7 @@ function decipher() {
     } else {
         text = text;
     }
-    console.log(text);
+    document.getElementById("message").innerHTML = "Decrypted Text!🎉​";
+    document.getElementById("displayEncrypted-menssage").innerHTML = text;
 }
 decipher()
