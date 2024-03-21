@@ -4,8 +4,10 @@ function encryption() {
     let text = document.getElementById("textToEncrypt").value;
     let resultEncrypt = " ";
 
-    if (!regEx.test(text) || text.length <= 0) {
-        alert("Error")
+    if (!regEx.test(text)) {
+        document.querySelector(".alert").textContent = "Uppercase letters and special characters are not allowed in this field."
+    } else if (text.length <= 0) {
+        document.querySelector(".alert").textContent = "The field cannot be empty."
     } else {
         for (let character of text) {
             if (character === "a") {
@@ -30,6 +32,11 @@ function encryption() {
 function decipher() {
     let text = document.getElementById("textToEncrypt").value;
 
+    if (!regEx.test(text)) {
+        document.querySelector(".alert").textContent = "Uppercase letters and special characters are not allowed in this field."
+    } else if (text.length <= 0) {
+        document.querySelector(".alert").textContent = "The field cannot be empty."
+    } else {
     text = text.replaceAll("ai", "a");
     text = text.replaceAll("enter", "e");
     text = text.replaceAll("imes", "i");
@@ -38,4 +45,5 @@ function decipher() {
 
     document.getElementById("message").textContent = "Decrypted Text!🎉​";
     document.getElementById("displayEncrypted-menssage").innerHTML = `<h3 class="style-message">${text}</h3>`;
+    }
 }

@@ -84,3 +84,10 @@ footer{
 .style-message{
     color: #2650aa;
 }
+.alert{
+    background-color: rgba(255, 0, 0, 0.322); /*RGBA representa rojo, verde, azul y alfa (transparencia)*/
+    color: red;
+    border-left: 0.5rem solid red; /* Borde de 0.5 rem solido color rojo*/
+    margin: 0 5rem;
+    text-align: center;
+}
