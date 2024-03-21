@@ -26,12 +26,8 @@ function encryption() {
         }
     }
 
-    document.getElementById("message").innerHTML = "Encrypted Text!🎉​";
-    let prueba = document.getElementById("displayEncrypted-menssage");
-    prueba.innerHTML = resultEncrypt;
-    prueba.style.fontSize = "1.5rem";
-    prueba.style.color = "#2650aa";
-    prueba.style.fontWeight = "bold"
+    document.getElementById("message").textContent = "Encrypted Text!🎉​";
+    document.getElementById("displayEncrypted-menssage").innerHTML = `<h3 class="style-message">${resultEncrypt}</h3>`;
 }
 
 function decipher() {
@@ -54,11 +50,8 @@ function decipher() {
     } else {
         text = text;
     }
-    document.getElementById("message").innerHTML = "Decrypted Text!🎉​";
-    let prueba = document.getElementById("displayEncrypted-menssage");
-    prueba.innerHTML = text;
-    prueba.style.fontSize = "1.5rem";
-    prueba.style.color = "#2650aa";
-    prueba.style.fontWeight = "bold"
+
+    document.getElementById("message").textContent = "Decrypted Text!🎉​";
+    document.getElementById("displayEncrypted-menssage").innerHTML = `<h3 class="style-message">${text}</h3>`;
 }
 
