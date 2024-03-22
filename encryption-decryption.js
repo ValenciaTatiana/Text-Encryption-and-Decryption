@@ -1,4 +1,6 @@
 let regEx = /^[a-z\s]*$/;
+let vowels = ["a", "e", "i", "o", "u"]
+let vowelsEncryp = ["ai", "enter", "imes", "ober", "ufat"]
 
 function encryption() {
     let text = document.getElementById("textToEncrypt").value;
@@ -8,6 +10,14 @@ function encryption() {
     if (!regEx.test(text) || text.length <= 0) {
         alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
 
+        alert.style.display = "block";
+
+        setTimeout(function () {
+            alert.style.display = "none";
+        }, 2000)
+    } else if (vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
+        
+        alert.textContent = "You can't encrypt, the text is already encrypted.";
         alert.style.display = "block";
 
         setTimeout(function () {
@@ -46,6 +56,14 @@ function decipher() {
         setTimeout(function () {
             alert.style.display = "none";
         }, 2000)
+    } else if (vowels.some(vowel => text.includes(vowel))) {
+        
+        alert.textContent = "You can't decrypt, the text is already decrypted.";
+        alert.style.display = "block";
+
+        setTimeout(function () {
+            alert.style.display = "none";
+        }, 2000)
     } else {
         text = text.replaceAll("ai", "a");
         text = text.replaceAll("enter", "e");
@@ -71,13 +89,5 @@ function copy() {
 
     document.body.removeChild(tempTextArea);
 
-    let alert = document.querySelector(".alertCopy");
-    alert.textContent = "Copied text";
-
-    alert.style.display = "block";
-
-    setTimeout(function () {
-        alert.style.display = "none";
-    }, 2000)
+    document.getElementById("message").innerHTML = `<h4 class="alertCopy">Copy Text ✅​</h4>`;
 }
-

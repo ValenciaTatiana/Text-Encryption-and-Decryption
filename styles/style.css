@@ -92,9 +92,5 @@ footer{
     text-align: center;
 }
 .alertCopy {
-    background-color: rgba(0, 255, 0, 0.322); /*RGBA representa rojo, verde, azul y alfa (transparencia)*/
-    color: green;
-    border-left: 0.5rem solid green; /* Borde de 0.5 rem solido color rojo*/
-    margin: 0 5rem;
-    text-align: center;
+    margin: 0.5rem 0;
 }
