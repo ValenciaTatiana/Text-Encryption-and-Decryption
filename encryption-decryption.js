@@ -56,7 +56,7 @@ function decipher() {
         setTimeout(function () {
             alert.style.display = "none";
         }, 2000)
-    } else if (vowels.some(vowel => text.includes(vowel))) {
+    } else if (vowels.some(vowel => text.includes(vowel)) && !vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
         
         alert.textContent = "You can't decrypt, the text is already decrypted.";
         alert.style.display = "block";
