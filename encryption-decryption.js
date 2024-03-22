@@ -3,11 +3,15 @@ let regEx = /^[a-z\s]*$/;
 function encryption() {
     let text = document.getElementById("textToEncrypt").value;
     let resultEncrypt = " ";
+    let alert = " ";
 
-    if (!regEx.test(text)) {
-        document.querySelector(".alert").textContent = "Uppercase letters and special characters are not allowed in this field."
-    } else if (text.length <= 0) {
-        document.querySelector(".alert").textContent = "The field cannot be empty."
+    if (!regEx.test(text) || text.length <= 0) {
+        alert = document.querySelector(".alert")
+        alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
+
+        setTimeout(function() {
+            alert.style.display = "none";
+        }, 2000)
     } else {
         for (let character of text) {
             if (character === "a") {
@@ -32,10 +36,13 @@ function encryption() {
 function decipher() {
     let text = document.getElementById("textToEncrypt").value;
 
-    if (!regEx.test(text)) {
-        document.querySelector(".alert").textContent = "Uppercase letters and special characters are not allowed in this field."
-    } else if (text.length <= 0) {
-        document.querySelector(".alert").textContent = "The field cannot be empty."
+    if (!regEx.test(text) || text.length <= 0) {
+        alert = document.querySelector(".alert")
+        alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
+        
+        setTimeout(function() {
+            alert.style.display = "none";
+        }, 2000)
     } else {
     text = text.replaceAll("ai", "a");
     text = text.replaceAll("enter", "e");
