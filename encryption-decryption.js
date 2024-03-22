@@ -2,19 +2,25 @@ let regEx = /^[a-z\s]*$/;
 let vowels = ["a", "e", "i", "o", "u"]
 let vowelsEncryp = ["ai", "enter", "imes", "ober", "ufat"]
 
+function alerts() {
+    let text = document.getElementById("textToEncrypt").value;
+    let alert = document.querySelector(".alert");
+    alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
+
+    alert.style.display = "block";
+
+    setTimeout(function () {
+        alert.style.display = "none";
+    }, 2000)
+}
+
 function encryption() {
     let text = document.getElementById("textToEncrypt").value;
     let resultEncrypt = " ";
     let alert = document.querySelector(".alert");
 
     if (!regEx.test(text) || text.length <= 0) {
-        alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
-
-        alert.style.display = "block";
-
-        setTimeout(function () {
-            alert.style.display = "none";
-        }, 2000)
+        alerts();
     } else if (vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
         
         alert.textContent = "You can't encrypt, the text is already encrypted.";
@@ -48,14 +54,7 @@ function decipher() {
     let alert = document.querySelector(".alert");
 
     if (!regEx.test(text) || text.length <= 0) {
-        alert = document.querySelector(".alert")
-        alert.textContent = !regEx.test(text) ? "Uppercase letters and special characters are not allowed in this field." : "The field cannot be empty."
-
-        alert.style.display = "block";
-
-        setTimeout(function () {
-            alert.style.display = "none";
-        }, 2000)
+        alerts();
     } else if (vowels.some(vowel => text.includes(vowel)) && !vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
         
         alert.textContent = "You can't decrypt, the text is already decrypted.";

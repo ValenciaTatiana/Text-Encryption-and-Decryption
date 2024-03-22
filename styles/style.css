@@ -1,7 +1,7 @@
 body {
     background-color: #f5f9ff;
     font-family: NTR;
-    margin: 0; /* Añadir margen cero para asegurar un espacio uniforme */
+    margin: 0; /* Añade margen cero para asegurar un espacio uniforme */
 }
 .head{
     font-size: 48px;
@@ -18,8 +18,6 @@ body {
     resize: none;
     width: 90%;
     height: 90%;
-    font-family: NTR;
-    font-size: 20px;
     padding: 1rem;
     border-radius: 1rem;
     outline: none; /* Quitar el borde al seleccionar el textarea */
@@ -38,7 +36,6 @@ body {
 }
 .displayEncrypted{
     background-color: #ffffff;
-    font-family: NTR;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
