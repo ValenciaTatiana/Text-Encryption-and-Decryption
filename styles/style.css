@@ -1,93 +1,124 @@
+/* Estilos generales del cuerpo del documento */
 body {
-    background-color: #f5f9ff;
-    font-family: NTR;
+    background-color: #f5f9ff; /* Color de fondo */
+    font-family: NTR; /* Fuente */
     margin: 0; /* Añade margen cero para asegurar un espacio uniforme */
 }
-.head{
-    font-size: 48px;
-    color: #0c307c;
-    margin: 1rem;
+
+/* Estilos para el título principal */
+.head {
+    font-size: 48px; /* Tamaño de fuente */
+    color: #0c307c; /* Color del texto */
+    margin: 1rem; /* Margen */
 }
-.headDescription{
-    text-align: center;
+
+/* Estilos para la descripción del título */
+.headDescription {
+    text-align: center; /* Alineación del texto */
     font-size: 25px;
-    margin: 0.5rem;
+    margin: 0.5rem; 
 }
-.textField{
-    border: none;
-    resize: none;
-    width: 90%;
-    height: 90%;
-    padding: 1rem;
-    border-radius: 1rem;
+
+/* Estilos para el área de entrada de texto */
+.textField {
+    border: none; /* Sin borde */
+    resize: none; /* No redimensionable */
+    width: 90%; /* Ancho */
+    height: 90%; /* Altura */
+    padding: 1rem; /* Espacio Interno */
+    border-radius: 1rem; /* Borde redondeado */
     outline: none; /* Quitar el borde al seleccionar el textarea */
 }
-.container{
-    display: grid;
-    grid-template-columns: 2.3fr 1fr;
-    gap: 10px;
+
+/* Estilos para el contenedor principal */
+.container {
+    display: grid; /* Tipo de visualización */
+    grid-template-columns: 2.3fr 1fr; /* Columnas del grid */
+    gap: 10px; /* Espacio entre elementos */
     text-align: center;
     margin: 2rem;
-    margin-bottom: 100px;
+    margin-bottom: 100px; /* Margen inferior */
 }
-.imgEncrypt{
+
+/* Estilos para la imagen de encriptado */
+.imgEncrypt {
     font-size: 10px;
     margin: 2rem 0 0.5rem;
 }
-.displayEncrypted{
+
+/* Estilos para el área de visualización del texto encriptado */
+.displayEncrypted {
     background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem; /* Borde redondeado */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra */
     padding: 1rem;
 }
-.displayEncrypted-menssage{
+
+/* Estilos para el texto dentro del área de visualización del texto encriptado */
+.displayEncrypted-menssage {
     color: #5a5a5a;
     margin: 2rem;
     font-size: 20px;
     padding: 0 2rem;
 }
-h2{
+
+/* Estilos para los encabezados dentro del área de visualización del texto encriptado */
+h2 {
     margin: 0;
 }
-button{
-    border: 0.02rem solid #0c307c; 
+
+/* Estilos para los botones */
+button {
+    border: 0.02rem solid #0c307c; /* Borde */
     border-radius: 0.2rem;
     color: #ffffff;
     background-color: #0c307c;
     font-size: 25px;
     padding: 0.5rem 1.5rem;
     margin: 0.5rem;
-    cursor: pointer;
+    cursor: pointer; /* Cursor */
 }
-button:hover{
-    background-color: #4f70b8;
-    border-color: #0c307c;
-    color: #000000;
-    font-weight: bold;
+
+/* Estilos para el efecto hover de los botones */
+button:hover {
+    background-color: #4f70b8; /* Color de fondo al pasar el mauose */
+    border-color: #0c307c; /* Color del borde al pasar el mauose */
+    color: #000000; /* Color del texto al pasar el mauose */
+    font-weight: bold; /* Grosor del texto al pasar el mauose */
 }
-.instructions{
+
+/* Estilos para las instrucciones */
+.instructions {
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 2rem; /* Margen izquierdo */
     color: #4d5f85;
-    font-weight: bold;
+    font-weight: bold; /* Grosor del texto */
 }
-footer{
+
+/* Estilos para el pie de página */
+footer {
     text-align: center;
     color: #0c307c;
     font-size: 20px;
     font-weight: bold;
     padding: 1rem;
 }
-.style-message{
+
+/* Estilos para el mensaje de éxito al copiar */
+.style-message {
     color: #2650aa;
 }
-.alert{
-    background-color: rgba(255, 0, 0, 0.322); /*RGBA representa rojo, verde, azul y alfa (transparencia)*/
+
+/* Estilos para la alerta */
+.alert {
+    background-color: rgba(255, 0, 0, 0.322); /* Color de fondo con transparecia */
     color: red;
-    border-left: 0.5rem solid red; /* Borde de 0.5 rem solido color rojo*/
+    border-left: 0.5rem solid red; /* Borde izquierdo */
     margin: 0 5rem;
     text-align: center;
 }
+
+/* Estilos para el mensaje de éxito al copiar */
 .alertCopy {
     margin: 0.5rem 0;
 }

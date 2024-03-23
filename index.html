@@ -14,30 +14,46 @@
 </head>
 
 <body>
+    <!-- Encabezado -->
     <header>
+        <!-- Título principal -->
         <h1 class="head">Ciphertext</h1>
+        <!-- Descripción del título -->
         <h3 class="headDescription">"Text Encryption & Decryption: Protect and Decrypt Your Messages Securely"</h3>
+        <!-- Alerta -->
         <h3 class="alert"></h3>
     </header>
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Área de texto -->
         <div class="textarea">
+            <!-- Entrada de texto -->
             <textarea id="textToEncrypt" class="textField" placeholder="Enter your text here..."></textarea>
+            <!-- Instrucciones -->
             <p class="instructions">ℹ️​ Only lowercase text is allowed, excluding letters with accents and special
                 characters.</p>
+            <!-- Botones de encriptar y desencriptar -->
             <button id="buttEncrypt" onclick="encryption()">Encrypt</button>
             <button id="buttDecrypt" onclick="decipher()">Decrypt</button>
         </div>
+        <!-- Visualización del texto encriptado -->
         <div class="displayEncrypted">
+            <!-- Mensaje -->
             <h2 id="message">Let's Encrypted</h2>
+            <!-- Imagen -->
             <img class="imgEncrypt" src="img/img.png" alt="let-s-encrypt">
+            <!-- Contenido del texto encriptado -->
             <div id="displayEncrypted-menssage">
                 <h3>No message was found.</h3>
                 <p>Enter the text you want to encrypt or decrypt.</p>
             </div>
+            <!-- Botón de copiar -->
             <button id="buttCopy" onclick="copy()">Copy</button>
         </div>
     </div>
+    <!-- Pie de página -->
     <footer>
+        <!-- Créditos -->
         <p>❤️​ Created by Tatiana Cuadros ❤️​ 2024.</p> <!-- poner linkeding y git -->
     </footer>
 </body>
