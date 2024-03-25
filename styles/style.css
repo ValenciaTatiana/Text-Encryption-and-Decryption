@@ -1,13 +1,151 @@
 /* Estilos generales del cuerpo del documento */
 body {
-    background-color: #f5f9ff; /* Color de fondo */
-    font-family: NTR; /* Fuente */
-    margin: 0; /* Añade margen cero para asegurar un espacio uniforme */
+    background-color: #f5f9ff;
+    font-family: NTR;
+    margin: 0;
+}
+
+/* Estilos para tamaños de pantalla de 1024px de ancho o más */
+@media screen and (min-width: 1024px) {
+    .head {
+        font-size: 68px; /* Tamaño de fuente */
+    }
+    .headDescription {
+        font-size: 30px;
+    }
+    .textField {
+        padding: 0.5rem;
+        width: 95%;
+        height: 110%;
+    }
+    .instructions {
+        font-size: 18px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 3.3fr 1fr;
+        gap: 5px;
+    }
+    .displayEncrypted {
+        margin: 0;
+        width: 90%;
+        height: 100%;
+    }
+    .message {
+        font-size: 35px;
+        margin: 0.5rem;
+    }
+    .imgEncrypt {
+        font-size: 30px;
+        margin: 1rem 0 0.5rem;
+    }
+    .titelDisplay {
+        font-size: 30px;
+        margin: 2rem 0 1rem;
+    }
+    .messageDisplay {
+        font-size: 22px;
+        margin: 1rem;
+    }
+    .footer {
+        font-size: 20px;
+        margin: 6rem 0 0 0;
+        padding: 1rem;
+    }
+    button {
+        font-size: 30px;
+    }
+}
+
+/* Estilos para tamaños de pantalla de 768px de ancho o más */
+@media screen and (min-width: 768px) {
+    .head {
+        font-size: 48px;
+    }
+    .headDescription {
+        font-size: 25px;
+    }
+    .textField {
+        padding: 0.5rem;
+        width: 95%;
+        height: 100%;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 2.3fr 0.8fr;
+        gap: 5px;
+    }
+    .displayEncrypted {
+        margin: 0;
+        width: 90%;
+        height: 95%;
+    }
+    .message {
+        font-size: 30px;
+        margin: 0.5rem;
+    }
+    .imgEncrypt {
+        font-size: 30px;
+        margin: 1rem 0 0.5rem;
+    }
+    .titelDisplay {
+        font-size: 25px;
+        margin: 2rem 0 1rem;
+    }
+    .messageDisplay {
+        font-size: 20px;
+        margin: 1rem;
+    }
+    .footer {
+        font-size: 20px;
+        margin: 4rem 0 0 0;
+        padding: 1rem;
+    }
+    button {
+        font-size: 25px;
+        margin: 1rem;
+    }
+}
+
+/* Estilos para tamaños de pantalla de menos de 768px de ancho (dispositivos móviles pequeños) */
+@media screen and (max-width: 767px) {
+    .head {
+        font-size: 36px;
+    }
+    .headDescription {
+        font-size: 18px;
+    }
+    .textField {
+        padding: 1rem;
+        width: 90%;
+        height: 100%;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .displayEncrypted {
+        width: 95%;
+    }
+    .message {
+        font-size: 24px;
+    }
+    .imgEncrypt {
+        font-size: 15px;
+    }
+    .titelDisplay {
+        font-size: 20px;
+    }
+    .messageDisplay {
+        font-size: 16px;
+    }
+    button {
+        font-size: 20px;
+        margin: 0 1rem 1rem 0;
+    }
 }
 
 /* Estilos para el título principal */
 .head {
-    font-size: 48px; /* Tamaño de fuente */
     color: #0c307c; /* Color del texto */
     margin: 1rem; /* Margen */
 }
@@ -15,26 +153,19 @@ body {
 /* Estilos para la descripción del título */
 .headDescription {
     text-align: center; /* Alineación del texto */
-    font-size: 25px;
-    margin: 0.5rem; 
 }
 
 /* Estilos para el área de entrada de texto */
 .textField {
     border: none; /* Sin borde */
     resize: none; /* No redimensionable */
-    width: 90%; /* Ancho */
-    height: 90%; /* Altura */
-    padding: 1rem; /* Espacio Interno */
     border-radius: 1rem; /* Borde redondeado */
     outline: none; /* Quitar el borde al seleccionar el textarea */
 }
 
 /* Estilos para el contenedor principal */
 .container {
-    display: grid; /* Tipo de visualización */
-    grid-template-columns: 2.3fr 1fr; /* Columnas del grid */
-    gap: 10px; /* Espacio entre elementos */
+    gap: 10px;/* Espacio entre elementos */
     text-align: center;
     margin: 2rem;
     margin-bottom: 100px; /* Margen inferior */
@@ -60,6 +191,7 @@ body {
     margin: 2rem;
     font-size: 20px;
     padding: 0 2rem;
+
 }
 
 /* Estilos para los encabezados dentro del área de visualización del texto encriptado */
@@ -73,9 +205,7 @@ button {
     border-radius: 0.2rem;
     color: #ffffff;
     background-color: #0c307c;
-    font-size: 25px;
     padding: 0.5rem 1.5rem;
-    margin: 0.5rem;
     cursor: pointer; /* Cursor */
 }
 
@@ -99,7 +229,6 @@ button:hover {
 footer {
     text-align: center;
     color: #0c307c;
-    font-size: 20px;
     font-weight: bold;
     padding: 1rem;
 }
