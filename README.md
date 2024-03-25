@@ -70,4 +70,5 @@ Desencriptar: "gaitober" => "gato"</p>
 
 # Insignia🏅
 _Insignia entregada por Alura CHALLENGES - ONE, por la finalización del **PROYECTO: DECODIFICADOR DE TEXTO CON JAVASCRIPT**._
+
 ![Insignia](https://github.com/ValenciaTatiana/Text-Encryption-and-Decryption/assets/157426277/95c68e4e-e372-4a17-b28c-3579a982bfbb)
