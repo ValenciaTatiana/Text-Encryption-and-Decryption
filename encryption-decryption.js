@@ -1,13 +1,12 @@
 // Expresión regular para validar que el texto contenga solo letras minúsculas y espacios
 let regEx = /^[a-z\s]*$/;
 
-// Arrays para almacenar las vocales y sus equivalentes encriptados
 let vowels = ["a", "e", "i", "o", "u"]
 let vowelsEncryp = ["ai", "enter", "imes", "ober", "ufat"]
 
 // Función para mostrar alertas
 function alerts() {
-    let text = document.getElementById("textToEncrypt").value;
+    let text = document.querySelector(".text-field-textarea").value;
     let alert = document.querySelector(".alert");
 
     // Mostrar alerta si no se cumple la validación de la expresión regular o si el campo está vacío
@@ -20,23 +19,18 @@ function alerts() {
         alert.style.display = "none";
     }, 2000)
 }
-
 // Función para encriptar el texto
 function encryption() {
-    let text = document.getElementById("textToEncrypt").value;
+    let text = document.querySelector(".text-field-textarea").value;
     let resultEncrypt = " ";
     let alert = document.querySelector(".alert");
 
     if (!regEx.test(text) || text.length <= 0) {
-        // Llamar a la función de alerta si no se cumple la validación
         alerts();
     } else if (vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
-
-        // Mostrar alerta si el texto ya está encriptado
         alert.textContent = "You can't encrypt, the text is already encrypted.";
         alert.style.display = "block";
 
-        // Ocultar la alerta después de 2 segundos
         setTimeout(function () {
             alert.style.display = "none";
         }, 2000)
@@ -58,25 +52,21 @@ function encryption() {
             }
         }
         // Mostrar el texto encriptado
-        document.getElementById("message").textContent = "Encrypted Text!🎉​";
-        document.getElementById("displayEncrypted-menssage").innerHTML = `<h3 class="style-message">${resultEncrypt}</h3>`;
+        document.querySelector(".display-titel").textContent = "Encrypted Text!🎉​";
+        document.querySelector(".display-encrypted-menssages").innerHTML = `<h3 class="style-message">${resultEncrypt}</h3>`;
     }
 }
-
 // Función para desencriptar el texto
 function decipher() {
-    let text = document.getElementById("textToEncrypt").value;
+    let text = document.querySelector(".text-field-textarea").value;
     let alert = document.querySelector(".alert");
 
     if (!regEx.test(text) || text.length <= 0) {
-        // Llamar a la función de alerta si no se cumple la validación
         alerts();
     } else if (vowels.some(vowel => text.includes(vowel)) && !vowelsEncryp.some(vowelEn => text.includes(vowelEn))) {
-        // Mostrar alerta si el texto ya está desencriptado
         alert.textContent = "You can't decrypt, the text is already decrypted.";
         alert.style.display = "block";
         
-        // Ocultar la alerta después de 2 segundos
         setTimeout(function () {
             alert.style.display = "none";
         }, 2000)
@@ -89,15 +79,13 @@ function decipher() {
         text = text.replaceAll("ufat", "u");
 
         // Mostrar el texto desencriptado
-        document.getElementById("message").textContent = "Decrypted Text!🎉​";
-        document.getElementById("displayEncrypted-menssage").innerHTML = `<h3 class="style-message">${text}</h3>`;
+        document.querySelector(".display-titel").textContent = "Decrypted Text!🎉​";
+        document.querySelector(".display-encrypted-menssages").innerHTML = `<h3 class="style-message">${text}</h3>`;
     }
-
 }
-
 // Función para copiar el texto encriptado/desencriptado al portapapeles
 function copy() {
-    let textToCopy = document.getElementById("displayEncrypted-menssage");
+    let textToCopy = document.querySelector(".display-encrypted-menssages");
 
     let tempTextArea = document.createElement("textarea");
     tempTextArea.value = textToCopy.textContent;
@@ -110,5 +98,5 @@ function copy() {
     document.body.removeChild(tempTextArea);
 
     // Mostrar mensaje de copia exitosa
-    document.getElementById("message").innerHTML = `<h4 class="alertCopy">Copy Text ✅​</h4>`;
+    document.querySelector(".display-titel").innerHTML = `<h3 class="alert-copy">Copy Text ✅​</h3>`;
 }

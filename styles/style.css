@@ -1,253 +1,189 @@
-/* Estilos generales del cuerpo del documento */
-body {
-    background-color: #f5f9ff;
+html {
+    font-size: 62.5%;
     font-family: NTR;
-    margin: 0;
+    background-color: #f5f9ff;
 }
-
-/* Estilos para tamaños de pantalla de 1024px de ancho o más */
-@media screen and (min-width: 1024px) {
-    .head {
-        font-size: 68px; /* Tamaño de fuente */
-    }
-    .headDescription {
-        font-size: 30px;
-    }
-    .textField {
-        padding: 0.5rem;
-        width: 95%;
-        height: 110%;
-    }
-    .instructions {
-        font-size: 18px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: 3.3fr 1fr;
-        gap: 5px;
-    }
-    .displayEncrypted {
-        margin: 0;
-        width: 90%;
-        height: 100%;
-    }
-    .message {
-        font-size: 35px;
-        margin: 0.5rem;
-    }
-    .imgEncrypt {
-        font-size: 30px;
-        margin: 1rem 0 0.5rem;
-    }
-    .titelDisplay {
-        font-size: 30px;
-        margin: 2rem 0 1rem;
-    }
-    .messageDisplay {
-        font-size: 22px;
-        margin: 1rem;
-    }
-    .footer {
-        font-size: 20px;
-        margin: 6rem 0 0 0;
-        padding: 1rem;
-    }
-    button {
-        font-size: 30px;
-    }
+body {
+    font-size: 16px;
 }
-
-/* Estilos para tamaños de pantalla de 768px de ancho o más */
-@media screen and (min-width: 768px) {
-    .head {
-        font-size: 48px;
-    }
-    .headDescription {
-        font-size: 25px;
-    }
-    .textField {
-        padding: 0.5rem;
-        width: 95%;
-        height: 100%;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: 2.3fr 0.8fr;
-        gap: 5px;
-    }
-    .displayEncrypted {
-        margin: 0;
-        width: 90%;
-        height: 95%;
-    }
-    .message {
-        font-size: 30px;
-        margin: 0.5rem;
-    }
-    .imgEncrypt {
-        font-size: 30px;
-        margin: 1rem 0 0.5rem;
-    }
-    .titelDisplay {
-        font-size: 25px;
-        margin: 2rem 0 1rem;
-    }
-    .messageDisplay {
-        font-size: 20px;
-        margin: 1rem;
-    }
-    .footer {
-        font-size: 20px;
-        margin: 4rem 0 0 0;
-        padding: 1rem;
-    }
-    button {
-        font-size: 25px;
-        margin: 1rem;
-    }
+.container-header,
+.container-text-field,
+.container-footer {
+    margin: 1rem;
 }
-
-/* Estilos para tamaños de pantalla de menos de 768px de ancho (dispositivos móviles pequeños) */
-@media screen and (max-width: 767px) {
-    .head {
-        font-size: 36px;
-    }
-    .headDescription {
-        font-size: 18px;
-    }
-    .textField {
-        padding: 1rem;
-        width: 90%;
-        height: 100%;
-    }
-    .container {
-        grid-template-columns: 1fr;
-    }
-    .displayEncrypted {
-        width: 95%;
-    }
-    .message {
-        font-size: 24px;
-    }
-    .imgEncrypt {
-        font-size: 15px;
-    }
-    .titelDisplay {
-        font-size: 20px;
-    }
-    .messageDisplay {
-        font-size: 16px;
-    }
-    button {
-        font-size: 20px;
-        margin: 0 1rem 1rem 0;
-    }
+.header-titel {
+    margin: 1rem 0;
+    color: #0c307c;
+    font-size: 3.5rem;
 }
-
-/* Estilos para el título principal */
-.head {
-    color: #0c307c; /* Color del texto */
-    margin: 1rem; /* Margen */
-}
-
-/* Estilos para la descripción del título */
-.headDescription {
-    text-align: center; /* Alineación del texto */
-}
-
-/* Estilos para el área de entrada de texto */
-.textField {
-    border: none; /* Sin borde */
-    resize: none; /* No redimensionable */
-    border-radius: 1rem; /* Borde redondeado */
-    outline: none; /* Quitar el borde al seleccionar el textarea */
-}
-
-/* Estilos para el contenedor principal */
-.container {
-    gap: 10px;/* Espacio entre elementos */
+.header-description {
+    margin: 0.5rem 0;
     text-align: center;
-    margin: 2rem;
-    margin-bottom: 100px; /* Margen inferior */
 }
-
-/* Estilos para la imagen de encriptado */
-.imgEncrypt {
-    font-size: 10px;
-    margin: 2rem 0 0.5rem;
-}
-
-/* Estilos para el área de visualización del texto encriptado */
-.displayEncrypted {
-    background-color: #ffffff;
-    border-radius: 1rem; /* Borde redondeado */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+.text-field-textarea {
+    width: 100%;
+    height: 17rem;
     padding: 1rem;
+    border: none;  
+    resize: none;  
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.5rem;
+    box-sizing: border-box;
 }
-
-/* Estilos para el texto dentro del área de visualización del texto encriptado */
-.displayEncrypted-menssage {
-    color: #5a5a5a;
-    margin: 2rem;
-    font-size: 20px;
-    padding: 0 2rem;
-
+.text-instructions {
+    text-align: center; 
+    color: #4d5f85;
+    font-weight: bold;
 }
-
-/* Estilos para los encabezados dentro del área de visualización del texto encriptado */
-h2 {
-    margin: 0;
+.text-button {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
-
-/* Estilos para los botones */
 button {
-    border: 0.02rem solid #0c307c; /* Borde */
+    text-align: center;
+    border: 0.02rem solid #0c307c;
     border-radius: 0.2rem;
     color: #ffffff;
     background-color: #0c307c;
-    padding: 0.5rem 1.5rem;
-    cursor: pointer; /* Cursor */
+    padding: 1rem 2.5rem;
+    cursor: pointer;
 }
-
-/* Estilos para el efecto hover de los botones */
 button:hover {
-    background-color: #4f70b8; /* Color de fondo al pasar el mauose */
-    border-color: #0c307c; /* Color del borde al pasar el mauose */
-    color: #000000; /* Color del texto al pasar el mauose */
-    font-weight: bold; /* Grosor del texto al pasar el mauose */
+    background-color: #4f70b8;
+    border-color: #0c307c;
+    color: #000000;
+    font-weight: bold;
 }
-
-/* Estilos para las instrucciones */
-.instructions {
-    text-align: left;
-    margin-left: 2rem; /* Margen izquierdo */
-    color: #4d5f85;
-    font-weight: bold; /* Grosor del texto */
+.display-encrypted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 2.5rem 0;
+    padding: 1.5rem;
 }
-
-/* Estilos para el pie de página */
-footer {
+.display-titel {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+.display-img {
+    width: 10rem;
+}
+.display-encrypted-menssages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display-message {
+    margin-bottom: 0;
+}
+.display-message-aux {
+    margin-top: 1rem;
+}
+.footer {
     text-align: center;
     color: #0c307c;
     font-weight: bold;
-    padding: 1rem;
 }
-
-/* Estilos para el mensaje de éxito al copiar */
+@media (min-width: 768px) {
+    .container-header,
+    .container-text-field,
+    .container-footer {
+        margin: 3rem;
+    }
+    .header-titel {
+        font-size: 4.5rem;
+    }
+    .header-description {
+        font-size: 2.5rem;
+    }
+    .container-text-field {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+    .display-encrypted {
+        margin: 0;
+    }
+    .display-titel {
+        margin-top: 3rem;
+        font-size: 2.8rem;
+    }
+    .display-img {
+        width: 12rem;
+    }
+    .display-encrypted-menssages {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .text-field-textarea {
+        height: 35rem;
+        font-size: 1.8rem;
+    }
+    .text-instructions {
+        font-size: 1.8rem;
+    }
+    button {
+        padding: 1.5rem 3.5rem;
+        font-size: 2rem;
+    }
+    .footer {
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1440px) {
+    .container-header,
+    .container-text-field,
+    .container-footer {
+        margin: 5rem;
+    }
+    .header-titel {
+        font-size: 5.5rem;
+    }
+    .header-description {
+        font-size: 3rem;
+    }
+    .container-text-field {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+    }
+    .display-titel {
+        margin: 3rem 0 2rem 0;
+        font-size: 3.2rem;
+    }
+    .display-img {
+        width: 14rem;
+    }
+    .text-field-textarea {
+        height: 35rem;
+        font-size: 2.3rem;
+    }
+    .text-instructions {
+        font-size: 2rem;
+    }
+    button {
+        padding: 2rem 4.5rem;
+        font-size: 2rem;
+    }
+    .footer {
+        margin-top: 5rem;
+        font-size: 2.5rem;
+    }
+}
 .style-message {
     color: #2650aa;
 }
-
-/* Estilos para la alerta */
 .alert {
-    background-color: rgba(255, 0, 0, 0.322); /* Color de fondo con transparecia */
+    background-color: rgba(255, 0, 0, 0.322);
     color: red;
-    border-left: 0.5rem solid red; /* Borde izquierdo */
+    border-left: 0.5rem solid red;
     margin: 0 5rem;
     text-align: center;
 }
-
-/* Estilos para el mensaje de éxito al copiar */
-.alertCopy {
-    margin: 0.5rem 0;
+.alert-copy {
+    margin: 0.5rem 0 1rem 0;
 }
